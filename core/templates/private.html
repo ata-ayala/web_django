@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Zona privada{% endblock %}
+
+{% block content %}
+<h1 class="mb-3">Zona privada</h1>
+
+<p>Estás viendo esta página porque iniciaste sesión correctamente.</p>
+<p><a href="{% url 'logout' %}">Cerrar sesión</a></p>
+{% endblock %}

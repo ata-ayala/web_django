@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h1 class="mb-3">Página pública</h1>
+
+{% if user.is_authenticated %}
+  <p>Hola {{ user.username }} |
+    <a href="{% url 'private' %}">Zona privada</a> |
+    <a href="{% url 'logout' %}">Salir</a>
+  </p>
+{% else %}
+  <p>
+    <a href="{% url 'login' %}">Iniciar sesión</a> |
+    <a href="{% url 'signup' %}">Registrarse</a>
+  </p>
+{% endif %}
+{% endblock %}
